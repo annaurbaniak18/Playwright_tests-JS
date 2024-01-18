@@ -1,0 +1,19 @@
+{
+  "name": "playwright-repository",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "playwright test --headed",
+    "ui": "playwright test --ui"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@playwright/test": "^1.41.0"
+  },
+  "dependencies": {
+    "uuid": "^9.0.1"
+  }
+}
