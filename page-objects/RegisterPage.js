@@ -12,6 +12,7 @@ export class RegisterPage {
     this.lastNameInput = page.getByLabel("Last name *");
     this.passwordInput = page.getByLabel("Password *");
     this.registerButton = page.getByRole("button", { name: "Register " });
+
   }
   signUpAsNewUser = async (email, firstname, lastname, password) => {
     await this.signInButton.waitFor();

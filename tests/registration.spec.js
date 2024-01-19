@@ -2,8 +2,9 @@ import { RegisterPage } from "../page-objects/RegisterPage.js";
 import { v4 as uuidv4 } from "uuid";
 const { test, expect } = require("@playwright/test");
 
-test.only("Registration to the shop", async ({ page }) => {
+test("Registration to the shop", async ({ page }) => {
   await page.goto("/index.php?controller=authentication&back=my-account");
+
   const registerPage = new RegisterPage(page);
   const firstname = "anna";
   const lastname = "testowa";
@@ -24,4 +25,9 @@ test.only("Registration to the shop", async ({ page }) => {
   const randomPassword = generateRandomPassword(10);
   const password = randomPassword;
   await registerPage.signUpAsNewUser(email, firstname, lastname, password);
+  const registerSuccessfully = page.getByText("Your account has been created.");
+  await expect(registerSuccessfully).toBeVisible();
+  const accountName = page.locator(".header_user_info .account");
+  await expect(accountName).toContainText("Anna");
+  await page.pause();
 });
