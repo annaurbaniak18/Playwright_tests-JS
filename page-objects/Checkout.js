@@ -18,7 +18,5 @@ export class Checkout {
 
     await this.proceedToCheckoutButton.waitFor();
     await this.proceedToCheckoutButton.click();
-
-    await this.page.pause();
   };
 }
