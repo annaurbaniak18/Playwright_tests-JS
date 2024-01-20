@@ -1,8 +1,4 @@
-import { v4 as uuidv4 } from "uuid";
-
 export const signUpData = {
-  firstname: "Anna",
-  lastname: "Testowa",
-  email: `${uuidv4()}@gmail.com`,
-  password: "User1234",
-};
+    email: "b7ed70de-fecb-42ed-89b5-2ed5ffa55219@gmail.com",
+    password: "User1234"
+  };

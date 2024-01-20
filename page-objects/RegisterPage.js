@@ -35,10 +35,6 @@ export class RegisterPage {
     await this.passwordInput.fill(signUpData.password);
     await this.registerButton.waitFor();
     await this.registerButton.click();
-    // const checkAccountCreated = await this.accountCreated.innerText();
-    // expect(this.accountCreated).toContainText(
-    //   " Your account has been created. "
-    // );
     expect(this.accountName).toContainText("Anna");
   };
 }
